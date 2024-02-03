@@ -5,7 +5,7 @@ function App() {
     return (
         <>
             <p className="text-center fw-bold my-5 py-5 display-1">
-                hello world
+                hello Othman
             </p>
         </>
     );
