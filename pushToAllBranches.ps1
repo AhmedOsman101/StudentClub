@@ -2,6 +2,14 @@
 $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed")
 # $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed" ,"Othman")
 
+
+# Switch to the main branch
+git checkout main
+
+# commit & sync all changes before execution
+git add .
+git commit -m "commit changes via PS script"
+git push -u origin main
 # Pull changes from the remote main branch
 git pull origin main
 
