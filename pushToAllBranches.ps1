@@ -7,9 +7,16 @@ $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed")
 git checkout main
 
 # commit & sync all changes before execution
+
+# stage all changes
 git add .
+
+# commit all changes to git
 git commit -m "commit changes via PS script"
+
+# sync/push all changes to github
 git push -u origin main
+
 # Pull changes from the remote main branch
 git pull origin main
 
