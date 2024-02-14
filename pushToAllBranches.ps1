@@ -1,6 +1,6 @@
 # Array of user branches
 $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed")
-# $userBranches = @("3ra2y", "Enas", "Sofy", "Othman")
+# $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed" ,"Othman")
 
 # Pull changes from the remote main branch
 git pull origin main
