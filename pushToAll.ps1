@@ -1,5 +1,6 @@
 # Array of user branches
 $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed")
+# $userBranches = @("3ra2y", "Enas", "Sofy", "Othman")
 
 # Loop over each user branch
 foreach ($userBranch in $userBranches) {
