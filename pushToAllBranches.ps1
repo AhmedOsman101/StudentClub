@@ -15,9 +15,8 @@ git push -u origin main
 # Pull changes from the remote main branch
 git pull origin main
 
-$hasBranches = Read-Host -Prompt "Do you have branches? (y/n)"
-
-if ($hasBranches -eq "y" -or $hasBranches -eq "Y") {
+# Check if there are any branches
+if ($args -contains '-y') {
     # Array of user branches
     $userBranches = git branch | ForEach-Object { $_.TrimStart("* ").Trim() }
     
@@ -35,11 +34,8 @@ if ($hasBranches -eq "y" -or $hasBranches -eq "Y") {
         }
     }
 }
-elseif ($hasBranches -eq "n" -or $hasBranches -eq "N") {
-    Write-Host "No branches found"
-}
 else {
-    Write-Host "Invalid input"
+    Write-Host "Done!"
 }
 # Switch to the main branch
 git checkout main
