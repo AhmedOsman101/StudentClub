@@ -19,23 +19,20 @@ $hasBranches = Read-Host -Prompt "Do you have branches? (y/n)"
 
 if ($hasBranches -eq "y" -or $hasBranches -eq "Y") {
     # Array of user branches
-    $userBranches = git branch -a
-    # $userBranches = @("3ra2y", "Enas", "Sofy", "Othman")
+    $userBranches = git branch | ForEach-Object { $_.TrimStart("* ").Trim() }
     
     # Loop over each user branch
     foreach ($userBranch in $userBranches) {
+        if ($userBranch -ne 'main') {
+            # Switch to the user branch
+            git checkout $userBranch
 
-        # Switch to the main branch
-        git checkout main
+            # Merge changes from the main branch into the user branch (if needed)
+            git merge main
 
-        # Switch to the user branch
-        git checkout $userBranch
-
-        # Merge changes from the main branch into the user branch (if needed)
-        git merge main
-
-        # Push the changes to GitHub
-        git push origin $userBranch
+            # Push the changes to GitHub
+            git push origin $userBranch
+        }
     }
 }
 elseif ($hasBranches -eq "n" -or $hasBranches -eq "N") {
