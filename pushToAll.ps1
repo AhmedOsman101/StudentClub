@@ -18,3 +18,6 @@ foreach ($userBranch in $userBranches) {
     # Push the changes to GitHub
     git push origin $userBranch
 }
+
+# Switch to the main branch
+git checkout main
