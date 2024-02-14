@@ -34,8 +34,7 @@ if ($args -contains '-y') {
         }
     }
 }
-else {
-    Write-Host "Done!"
-}
+
+Write-Host "Done!"
 # Switch to the main branch
 git checkout main
