@@ -2,14 +2,14 @@
 $userBranches = @("3ra2y", "Enas", "Sofy", "Waleed")
 # $userBranches = @("3ra2y", "Enas", "Sofy", "Othman")
 
+# Switch to the main branch
+git checkout main
+
+# Pull changes from the remote main branch
+git pull origin main
+
 # Loop over each user branch
 foreach ($userBranch in $userBranches) {
-    # Switch to the main branch
-    git checkout main
-
-    # Pull changes from the remote main branch
-    git pull origin main
-
     # Switch to the user branch
     git checkout $userBranch
 
