@@ -16,7 +16,7 @@ git push -u origin main
 git pull origin main
 
 # Check if there are any branches
-if ($args -contains '-y') {
+if ($args -contains '-b') {
     # Array of user branches
     $userBranches = git branch | ForEach-Object { $_.TrimStart("* ").Trim() }
     
@@ -30,7 +30,13 @@ if ($args -contains '-y') {
             git merge main
 
             # Push the changes to GitHub
-            git push origin $userBranch
+            try {
+                git push origin $userBranch
+                Write-Host "Changes pushed to $userBranch on GitHub."
+            }
+            catch {
+                Write-Host "Error pushing changes to $userBranch on GitHub: $_"
+            }
         }
     }
 }
