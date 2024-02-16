@@ -10,8 +10,8 @@ return new class extends Migration {
      */
     public function up(): void {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('nationality')->after('email');
-            $table->text('skills')->after('nationality')->nullable();
+            $table->string('country')->after('email');
+            $table->text('skills')->after('country')->nullable();
             $table->text('bio')->after('skills')->nullable();
             $table->integer('Score', unsigned: true)->after('bio');
         });
@@ -22,7 +22,7 @@ return new class extends Migration {
      */
     public function down(): void {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('nationality');
+            $table->dropColumn('country');
             $table->dropColumn('skills');
             $table->dropColumn('bio');
             $table->dropColumn('Score');
