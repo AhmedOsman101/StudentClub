@@ -10,16 +10,11 @@ class HomeRank extends Component {
 
     public $counter;
 
-    public function getTeam($id) {
-        $userTeam = Team::find($id);
-        return $userTeam->name;
-    }
-
     public function render() {
         $users = User::orderBy('score', 'desc')
             ->orderBy('id')
             ->take(10)
-            ->get(['name', 'score', 'country', 'current_team_id']);
+            ->get();
 
         return view('livewire.home-rank', ['users' => $users]);
     }
