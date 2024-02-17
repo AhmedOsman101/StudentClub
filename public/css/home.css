@@ -1,0 +1,229 @@
+:root {
+    --yellow: #ffc107;
+    --violet: #b93ce5;
+    --blue: #000354;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body  */
+.body{
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    padding: 50px ;
+}
+
+/* Side Bar Ya Othman */
+.sidebar{
+    width: 150px;
+    height: 100vh;
+    background-color: #b93ce5;
+    float: left;
+    position: fixed;
+}
+
+/* First Part */
+.first_part{
+    width: 100%;
+    height: 400px;
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Diagram */
+.first_part .diagram{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    border: 2px solid var(--violet);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.first_part .diagram h1{
+    width: 100%;
+    text-align: center;
+    margin:-5px 0;
+}
+
+.first_part .diagram .hr{
+    width: 50%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: var(--yellow);
+}
+
+.first_part .diagram div{
+    display: flex;
+    width: 80%;
+    height: 30px ;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.first_part .diagram div .state_color{
+    background-color: var(--violet);
+    width: 65%;
+    height: 40%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.first_part .diagram div .state_text{
+    width: 20%;
+    margin-right:7%;
+}
+
+.first_part .diagram div .percentage{
+    width: 5%;
+    margin-left: 3%;
+}
+
+
+/*                  Productivity                */
+.first_part .productivity{
+    width: 42%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--violet);
+    padding: 15px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* hr */
+.first_part .productivity .hr{
+    width: 50%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: var(--yellow);
+}
+
+/* Cycle */
+.first_part .productivity .cycle{
+    width: 200px ;
+    height: 200px;
+    border: 15px solid var(--violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* Text */
+.first_part .productivity .text{
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 75px;
+    justify-content: space-around;
+}
+
+/* Day Week */
+.first_part .productivity .text .day , .week{
+    text-align: center;
+}
+
+
+/* Rank */
+.body .rank{
+    width: 100%;
+    height: auto;
+    margin: 50px 0px 25px;
+    padding: 15px 25px;
+    border: 2px solid var(--violet);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* hr */
+.body .rank .hr{
+    width: 30%;
+    height: 2px;
+    margin: 10px 0 20px;
+    background-color: var(--yellow);
+}
+
+/*                          Media Query                              */
+
+/* 1000 */
+@media(max-width:1000px){
+    .body{
+        padding: 25px ;
+    }
+}
+
+/* 900 */
+@media(max-width:900px){
+    .first_part{
+        height: 850px;
+        margin-bottom: 0;
+    }
+    .first_part .diagram{
+        width: 100%;
+        height: 400px;
+    }
+    .first_part .productivity{
+        width: 100%;
+        height: 400px;
+    }
+    .body .rank{
+    margin-top: 0;
+    }
+}
+
+
+/*     Scrolll      */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--violet);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--violet);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}
