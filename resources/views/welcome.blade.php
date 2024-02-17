@@ -10,10 +10,10 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net" rel="preconnect">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
         <!-- ========== Start livewire styles ========== -->
         @livewireStyles
         <!-- ========== End livewire styles ========== -->
+        <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
 
@@ -47,6 +47,7 @@
                     </svg>
                 </div>
 
+                @livewire("select-flags")
                 <div class="mt-16">
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
                         <a class="duration-250 flex scale-100 rounded-lg bg-white from-gray-700/50 via-transparent p-6 shadow-2xl shadow-gray-500/20 transition-all focus:outline focus:outline-2 focus:outline-red-500 motion-safe:hover:scale-[1.01] dark:bg-gray-800/50 dark:bg-gradient-to-bl dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/5"
@@ -63,7 +64,6 @@
                                 </div>
 
                                 <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
                                 <p class="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                                     Laravel has wonderful documentation covering every aspect of the framework. Whether
                                     you are a newcomer or have prior experience with Laravel, we recommend reading our
