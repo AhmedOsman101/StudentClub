@@ -44,4 +44,4 @@ if ($args -contains '-b') {
 # Switch to the main branch
 git checkout main
 
-Write-Host "Done!"
+Write-Host "Done!" -ForegroundColor DarkGreen
