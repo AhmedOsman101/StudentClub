@@ -1,6 +1,6 @@
 <div wire:poll.keep-alive.5s>
     <center>
-        <h1>Global Rank</h1>
+        <h1>Top 10 Students</h1>
         <div class="hr"></div>
     </center>
     <table class="table">
