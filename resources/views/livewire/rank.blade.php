@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.keep-alive.2s >
     <center>
         <h1>Global Rank</h1>
         <div class="hr"></div>
