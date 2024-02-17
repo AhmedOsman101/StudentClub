@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="{{asset('images/Student Club Logo.png')}}"/>
-    <link rel="stylesheet" href="{{ asset('css/home.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-    <title>Home</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <link href="{{ asset("images/Student Club Logo.png") }}" rel="icon" type="image/png" />
+        <link href="{{ asset("css/home.css") }}" rel="stylesheet">
+        <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
+        <title>{{ env("APP_NAME") }}</title>
+    </head>
 
-<body>
-    {{-- Side Bar Ya Othman --}}
-    <div class="sidebar">
-    </div>
-    <div class="body">
-        <div class="first_part">
-            @livewire('State')
-            @livewire('Productivity')
-            
+    <body>
+        {{-- Side Bar Ya Othman --}}
+        <div class="sidebar">
         </div>
-        <div class="rank">
+        <div class="body">
+            <div class="first_part">
+                @livewire("State")
+                @livewire("Productivity")
 
-            @livewire('homeRank')
+            </div>
+            <div class="rank">
+
+                @livewire("homeRank")
+            </div>
+
         </div>
-
-    </div>
-</body>
+    </body>
 
 </html>
