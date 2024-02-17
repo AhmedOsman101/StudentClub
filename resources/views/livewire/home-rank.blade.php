@@ -16,7 +16,7 @@
         <tbody>
             @foreach ($users as $user)
                 <tr>
-                    <td> {{ $user->id }} </td>
+                    <td> {{ ++$counter }} </td>
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->score }} </td>
                     <td> {{ $user->country }} </td>
