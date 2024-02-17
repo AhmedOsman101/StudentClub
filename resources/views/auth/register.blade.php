@@ -32,11 +32,11 @@
                 <x-input autocomplete="new-password" class="mt-1 block w-full" id="password_confirmation"
                     name="password_confirmation" required type="password" />
             </div>
-            {{-- <div class="mt-4">
-                <x-label for="country" value="{{ __('Country') }}" />
-                <x-input id="country" class="block mt-1 w-full" type="text" name="country" required autocomplete="country" />
-            </div> --}}
-            @livewire("select-flags")
+            <div class="mt-4">
+                <x-label for="country" value="{{ __("Country") }}" />
+                <x-input autocomplete="country" class="mt-1 block w-full" id="country" name="country" required
+                    type="text" />
+            </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">

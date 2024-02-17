@@ -21,7 +21,7 @@
                     <td class="text-center"> {{ $user->name }} </td>
                     <td class="text-center"> {{ $user->score }} </td>
                     <td class="text-center">{{ $user->team->name }}</td>
-                    <td class="text-center"> {{ $user->country }} </td>
+                    <td class="text-center">{{ $user->country }}</td>
                 </tr>
             @endforeach
         </tbody>
