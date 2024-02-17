@@ -1,0 +1,66 @@
+:root {
+    --yellow: #ffc107;
+    --violet: #b93ce5;
+    --blue: #000354;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body  */
+.body {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    padding: 25px 50px;
+}
+
+/* Side Bar Ya Othman */
+.sidebar {
+    width: 150px;
+    height: 100vh;
+    background-color: #b93ce5;
+    float: left;
+    position: fixed;
+}
+
+/* Rank */
+.body .rank {
+    width: 100%;
+    height: 525px;
+    margin:25px 0;
+    padding: 15px 25px;
+    border: 2px solid var(--violet);
+}
+
+/* hr */
+.body .hr {
+    width: 30%;
+    height: 2px;
+    margin: 10px 0 20px;
+    background-color: var(--yellow);
+}
+
+/*     Scrolll      */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--violet);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--violet);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}

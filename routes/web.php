@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
+});
+Route::get('/Rank', function () {
+    return view('Rank');
+});
+
+Route::get('/mail', function () {
+    Mail::to("test@test.com")->send(new TestMail());
 });
 
 Route::middleware([
