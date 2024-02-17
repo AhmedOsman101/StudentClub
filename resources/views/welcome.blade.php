@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net" rel="preconnect">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <link href={{ asset("css/tailwind.css") }} rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <!-- ========== Start livewire styles ========== -->
         @livewireStyles
         <!-- ========== End livewire styles ========== -->
