@@ -1,6 +1,3 @@
-@php
-    $counter = 0;
-@endphp
 <div wire:poll.keep-alive.2s>
     <center>
         <h1>Global Rank</h1>
@@ -19,13 +16,14 @@
             </thead>
             <tbody>
                 @foreach ($users as $user)
-                    <tr>
-                        <td class="text-center"> {{ ++$counter }} </td>
-                        <td class="text-center"> {{ $user->name }} </td>
-                        <td class="text-center"> {{ $user->score }} pts</td>
-                        <td class="text-center">{{ $user->team->name }}</td>
-                        <td class="text-center"> {{ $user->country }} </td>
-                    </tr>
+                <tr>
+                    <td class="text-center"> {{ ++$counter }} </td>
+                    <td class="text-center"> {{ $user->name }} </td>
+                    <td class="text-center"> {{ $user->score }} pts</td>
+                    <td class="text-center">{{ optional($user->team)->name }}</td>
+                    <td class="text-center">{{ $user->country }}</td>
+                    {{-- @dump($user->team->name) --}}
+                </tr>
                 @endforeach
             </tbody>
         </table>
