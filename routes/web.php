@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\Gmail;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,7 @@ Route::get('/rank', function () {
 });
 
 Route::get('/mail', function () {
-    Mail::to("test@test.com")->send(new TestMail());
+    Mail::to('ahmadahly284@gmail.com')->send(new Gmail);
 });
 
 Route::middleware([
