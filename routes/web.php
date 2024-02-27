@@ -20,13 +20,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('Home');
-});
-Route::get('/rank', function () {
-    return view('Rank');
-});
-
 Route::get('/mail', function () {
     Mail::to('ahmadahly284@gmail.com')->send(new Gmail);
 });
@@ -36,7 +29,14 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    Route::view('/', 'Home');
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::view('/rank', 'Rank');
+
+    Route::view('/pomodoro', 'Pomodoro');
+
 });

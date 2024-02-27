@@ -8,10 +8,15 @@ use Livewire\WithPagination;
 
 class Rank extends Component {
     use WithPagination;
+
+    public $counter;
+
     public function render() {
-        $users = User::orderBy('score', 'desc')
+        $users = User::with('team')
+            ->orderBy('score', 'desc')
             ->orderBy('id')
             ->paginate(10);
+        // $users = User::with('team')->paginate(10);
         return view('livewire.rank', ['users' => $users]);
     }
 }
