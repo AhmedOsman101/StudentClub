@@ -1,4 +1,4 @@
-<select autocomplete="country"
+<select autocomplete="country" wire:model="state.country"
     class='mt-1 block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-indigo-600 dark:focus:ring-indigo-600'
     id="country" name="country" required>
     <option value="Afghanistan">Afghanistan</option>
