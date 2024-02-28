@@ -1,0 +1,8 @@
+- Profile pic storage online
+- add Bio, Skills and Country fields to the update profile page
+- ToDo page
+- Calendar
+- Pomodoro
+- Score system
+- Productivity table
+- Side bar
