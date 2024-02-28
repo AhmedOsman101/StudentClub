@@ -1,5 +1,5 @@
 - Profile pic storage online
-- add Bio, Skills and Country fields to the update profile page
+- add Bio, Skills and Country fields to the update profile page (Done)
 - ToDo page
 - Calendar
 - Pomodoro
