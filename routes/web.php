@@ -37,6 +37,6 @@ Route::middleware([
 
     Route::view('/rank', 'Rank');
 
-    Route::view('/pomodoro', 'Pomodoro');
+    Route::view('/pomodoro', 'pomodoroTimer');
 
 });
