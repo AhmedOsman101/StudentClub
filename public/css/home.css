@@ -84,7 +84,10 @@
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
-
+.first_part .diagram div .state_color .avarage{
+    height: 100%;
+    background-color: #ffc107;
+}
 .first_part .diagram div .state_text{
     width: 20%;
     margin-right:7%;
