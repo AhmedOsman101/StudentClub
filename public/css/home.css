@@ -86,6 +86,11 @@
 }
 .first_part .diagram div .state_color .avarage{
     height: 100%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
     background-color: #ffc107;
 }
 .first_part .diagram div .state_text{
@@ -125,9 +130,10 @@
 
 /* Cycle */
 .first_part .productivity .cycle{
+    position: relative;
     width: 200px ;
     height: 200px;
-    border: 15px solid var(--violet);
+    border: 10px solid var(--violet);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +143,20 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-
+.first_part .productivity .cycle .cycle_avarage{
+    background-color: var(--yellow);
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.first_part .productivity .cycle .cycle_percentage{
+    position: absolute;
+}
 /* Text */
 .first_part .productivity .text{
     display: flex;

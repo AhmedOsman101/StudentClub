@@ -1,4 +1,5 @@
 <div class="diagram">
+
     <h1>Your State</h1>
     <div class="hr"></div>
     <div class="Sunday">
@@ -7,71 +8,138 @@
         </div>
         <div class="state_color">
             {{-- Sunday Percentage --}}
-            <div class="avarage" style="width: 100%"></div>
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->sunday }}% @endforeach
+            ">
+            </div>
         </div>
-        <div class="percentage">00%</div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->sunday }}%
+            @endforeach
+        </div>
     </div>
-    <div class="Monday">
+    
+    <div class="monday">
         <div class="state_text">
-            Monday
+            <p>Monday</p>
         </div>
         <div class="state_color">
-            {{-- Monday Percentage --}}
-            <div class="avarage" style="width: 90%"></div>
+            {{-- monday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->monday }}% @endforeach
+            ">
+            </div>
         </div>
-        <div class="percentage">00%</div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->monday }}%
+            @endforeach
+        </div>
     </div>
-    <div class="Tuesday">
-        <div class="state_text">
-            Tuesday
-        </div>
-        <div class="state_color">
-            {{-- Tuesday Percentage --}}
-            <div class="avarage" style="width: 70%"></div>
-        </div>
-        <div class="percentage">00%</div>
-    </div>
-    <div class="Wednesday">
-        <div class="state_text">
-            Wednesday
-        </div>
-        <div class="state_color">
-            {{-- Wednesday Percentage --}}
-            <div class="avarage" style="width: 60%"></div>
-        </div>
-        <div class="percentage">00%</div>
-    </div>
-    <div class="Thursday">
-        <div class="state_text">
-            Thursday
-        </div>
-        <div class="state_color">
-            {{-- Thursday Percentage --}}
-            <div class="avarage" style="width: 10%"></div>
-        </div>
-        <div class="percentage">00%</div>
-        
-    </div>
-    <div class="Friday">
-        <div class="state_text">
-            Friday
-        </div>
-        <div class="state_color">
-            {{-- Friday Percentage --}}
-            <div class="avarage" style="width: 16%"></div>
-        </div>
-        <div class="percentage">00%</div>
-        
-    </div>
-    <div class="Saturday">
-        <div class="state_text">
-            Saturday
-        </div>
-        <div class="state_color">
-            {{-- Saturday Percentage --}}
-            <div class="avarage" style="width: 40%"></div>
-        </div>
-        <div class="percentage">00%</div>
 
+    <div class="thursday">
+        <div class="state_text">
+            <p>thursday</p>
+        </div>
+        <div class="state_color">
+            {{-- thursday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->thursday }}% @endforeach
+            ">
+            </div>
+        </div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->thursday }}%
+            @endforeach
+        </div>
     </div>
+
+    <div class="wednesday">
+        <div class="state_text">
+            <p>wednesday</p>
+        </div>
+        <div class="state_color">
+            {{-- wednesday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->wednesday }}% @endforeach
+            ">
+            </div>
+        </div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->wednesday }}%
+            @endforeach
+        </div>
+    </div>
+
+    <div class="thuesday">
+        <div class="state_text">
+            <p>thuesday</p>
+        </div>
+        <div class="state_color">
+            {{-- thuesday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->thuesday }}% @endforeach
+            ">
+            </div>
+        </div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->thuesday }}%
+            @endforeach
+        </div>
+    </div>
+
+    <div class="friday">
+        <div class="state_text">
+            <p>friday</p>
+        </div>
+        <div class="state_color">
+            {{-- friday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->friday }}% @endforeach
+            ">
+            </div>
+        </div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->friday }}%
+            @endforeach
+        </div>
+    </div>
+
+    <div class="saturday">
+        <div class="state_text">
+            <p>saturday</p>
+        </div>
+        <div class="state_color">
+            {{-- saturday Percentage --}}
+            <div class="avarage"
+                style="width: 
+            @foreach ($days as $day)
+            {{ $day->saturday }}% @endforeach
+            ">
+            </div>
+        </div>
+        <div class="percentage">
+            @foreach ($days as $day)
+            {{ $day->saturday }}%
+            @endforeach
+        </div>
+    </div>
+
 </div>
