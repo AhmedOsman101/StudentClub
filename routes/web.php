@@ -1,8 +1,6 @@
 <?php
 
-use App\Mail\Gmail;
-use App\Mail\TestMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +21,8 @@ Route::get('/welcome', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified',
+    'shareCurrentUser',
+    'verified'
 ])->group(function () {
 
     Route::view('/', 'Home');
@@ -35,4 +34,6 @@ Route::middleware([
     Route::view('/rank', 'Rank');
 
     Route::view('/pomodoro', 'pomodoroTimer');
+
+    // Route::get('/getUser', UserController::class . '@index');
 });
