@@ -40,21 +40,21 @@
         </div>
     </div>
 
-    <div class="thursday">
+    <div class="tuesday">
         <div class="state_text">
-            <p>thursday</p>
+            <p>tuesday</p>
         </div>
         <div class="state_color">
-            {{-- thursday Percentage --}}
+            {{-- tuesday Percentage --}}
             <div class="avarage" style="width: 
-            @foreach ($days as $day)
-            {{ $day->thursday }}% @endforeach
-            ">
+                @foreach ($days as $day)
+                {{ $day->tuesday }}% @endforeach
+                ">
             </div>
         </div>
         <div class="percentage">
             @foreach ($days as $day)
-            {{ $day->thursday }}%
+            {{ $day->tuesday }}%
             @endforeach
         </div>
     </div>
@@ -78,21 +78,21 @@
         </div>
     </div>
 
-    <div class="tuesday">
+    <div class="thursday">
         <div class="state_text">
-            <p>tuesday</p>
+            <p>thursday</p>
         </div>
         <div class="state_color">
-            {{-- tuesday Percentage --}}
+            {{-- thursday Percentage --}}
             <div class="avarage" style="width: 
             @foreach ($days as $day)
-            {{ $day->tuesday }}% @endforeach
+            {{ $day->thursday }}% @endforeach
             ">
             </div>
         </div>
         <div class="percentage">
             @foreach ($days as $day)
-            {{ $day->tuesday }}%
+            {{ $day->thursday }}%
             @endforeach
         </div>
     </div>
