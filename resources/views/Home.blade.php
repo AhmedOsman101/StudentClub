@@ -12,9 +12,6 @@
     </head>
 
     <body>
-        {{-- Side Bar Ya Othman --}}
-        <div class="sidebar">
-        </div>
         <div class="body">
             <div class="first_part">
                 @livewire("State")

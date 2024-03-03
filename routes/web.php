@@ -1,8 +1,6 @@
 <?php
 
-use App\Mail\Gmail;
-use App\Mail\TestMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,15 +18,13 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/mail', function () {
-    Mail::to('ahmadahly284@gmail.com')->send(new Gmail);
-});
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified',
+    'shareCurrentUser',
+    'verified'
 ])->group(function () {
+
     Route::view('/', 'Home');
 
     Route::get('/dashboard', function () {
@@ -37,6 +33,7 @@ Route::middleware([
 
     Route::view('/rank', 'Rank');
 
-    Route::view('/pomodoro', 'Pomodoro');
+    Route::view('/pomodoro', 'pomodoroTimer');
 
+    // Route::get('/getUser', UserController::class . '@index');
 });
