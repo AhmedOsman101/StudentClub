@@ -71,4 +71,8 @@ class User extends Authenticatable {
     public function team() {
         return $this->belongsTo(Team::class, 'current_team_id');
     }
+
+    public function score() {
+        return $this->hasOne(Score::class);
+    }
 }

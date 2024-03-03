@@ -5,12 +5,10 @@ namespace App\Livewire;
 use App\Models\Score;
 use Livewire\Component;
 
-class State extends Component
-{
-    public function render()
-    {
+class State extends Component {
+    public function render() {
         $days = Score::all();
-        return view('livewire.state',[
+        return view('livewire.state', [
             'days' => $days,
         ]);
     }
