@@ -1,6 +1,6 @@
-<div wire:poll.keep-alive.2s>
+<div wire:poll.keep-alive.5s>
     <center>
-        <h1>Global Rank</h1>
+        <h1>Top 10 Students</h1>
         <div class="hr"></div>
     </center>
     <table class="table">
@@ -19,9 +19,9 @@
                 <tr>
                     <td class="text-center"> {{ ++$counter }} </td>
                     <td class="text-center"> {{ $user->name }} </td>
-                    <td class="text-center"> {{ $user->score }} </td>
-                    <td class="text-center">{{ $this->getTeam($user->current_team_id) }}</td>
-                    <td class="text-center"> {{ $user->country }} </td>
+                    <td class="text-center"> {{ $user->score }} pts</td>
+                    <td class="text-center">{{ $user->team->name }}</td>
+                    <td class="text-center">{{ $user->country }}</td>
                 </tr>
             @endforeach
         </tbody>

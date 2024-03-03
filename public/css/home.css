@@ -4,21 +4,21 @@
     --blue: #000354;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Body  */
-.body{
+.body {
     width: calc(100% - 150px);
     margin-left: 150px;
-    padding: 50px ;
+    padding: 50px;
 }
 
 /* Side Bar Ya Othman */
-.sidebar{
+.sidebar {
     width: 150px;
     height: 100vh;
     background-color: #b93ce5;
@@ -27,7 +27,7 @@
 }
 
 /* First Part */
-.first_part{
+.first_part {
     width: 100%;
     height: 400px;
     margin: 25px 0;
@@ -37,7 +37,7 @@
 }
 
 /* Diagram */
-.first_part .diagram{
+.first_part .diagram {
     width: 55%;
     height: 100%;
     display: flex;
@@ -53,28 +53,28 @@
     -o-border-radius: 25px;
 }
 
-.first_part .diagram h1{
+.first_part .diagram h1 {
     width: 100%;
     text-align: center;
-    margin:-5px 0;
+    margin: -5px 0;
 }
 
-.first_part .diagram .hr{
-    width: 50%;
+.first_part .diagram .hr {
+    width: 60%;
     height: 2px;
     margin: 10px 0;
     background-color: var(--yellow);
 }
 
-.first_part .diagram div{
+.first_part .diagram div {
     display: flex;
     width: 80%;
-    height: 30px ;
+    height: 30px;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.first_part .diagram div .state_color{
+.first_part .diagram div .state_color {
     background-color: var(--violet);
     width: 65%;
     height: 40%;
@@ -92,20 +92,19 @@
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     background-color: #ffc107;
-}
+} 
 .first_part .diagram div .state_text{
     width: 20%;
-    margin-right:7%;
+    margin-right: 7%;
 }
 
-.first_part .diagram div .percentage{
+.first_part .diagram div .percentage {
     width: 5%;
     margin-left: 3%;
 }
 
-
 /*                  Productivity                */
-.first_part .productivity{
+.first_part .productivity {
     width: 42%;
     height: 100%;
     display: flex;
@@ -121,7 +120,7 @@
 }
 
 /* hr */
-.first_part .productivity .hr{
+.first_part .productivity .hr {
     width: 50%;
     height: 2px;
     margin: 10px 0;
@@ -130,7 +129,6 @@
 
 /* Cycle */
 .first_part .productivity .cycle{
-    position: relative;
     width: 200px ;
     height: 200px;
     border: 10px solid var(--violet);
@@ -158,7 +156,7 @@
     position: absolute;
 }
 /* Text */
-.first_part .productivity .text{
+.first_part .productivity .text {
     display: flex;
     margin-top: 15px;
     width: 100%;
@@ -167,13 +165,13 @@
 }
 
 /* Day Week */
-.first_part .productivity .text .day , .week{
+.first_part .productivity .text .day,
+.week {
     text-align: center;
 }
 
-
 /* Rank */
-.body .rank{
+.body .rank {
     width: 100%;
     height: auto;
     margin: 50px 0px 25px;
@@ -187,8 +185,8 @@
 }
 
 /* hr */
-.body .rank .hr{
-    width: 30%;
+.body .rank .hr {
+    width: 40%;
     height: 2px;
     margin: 10px 0 20px;
     background-color: var(--yellow);
@@ -197,31 +195,30 @@
 /*                          Media Query                              */
 
 /* 1000 */
-@media(max-width:1000px){
-    .body{
-        padding: 25px ;
+@media (max-width: 1000px) {
+    .body {
+        padding: 25px;
     }
 }
 
 /* 900 */
-@media(max-width:900px){
-    .first_part{
+@media (max-width: 900px) {
+    .first_part {
         height: 850px;
         margin-bottom: 0;
     }
-    .first_part .diagram{
+    .first_part .diagram {
         width: 100%;
         height: 400px;
     }
-    .first_part .productivity{
+    .first_part .productivity {
         width: 100%;
         height: 400px;
     }
-    .body .rank{
-    margin-top: 0;
+    .body .rank {
+        margin-top: 0;
     }
 }
-
 
 /*     Scrolll      */
 

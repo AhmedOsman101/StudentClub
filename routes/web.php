@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\Gmail;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -15,15 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
-Route::get('/Rank', function () {
-    return view('Rank');
+Route::get('/welcome', function () {
+    return view('welcome');
 });
 
 Route::get('/mail', function () {
-    Mail::to("test@test.com")->send(new TestMail());
+    Mail::to('ahmadahly284@gmail.com')->send(new Gmail);
 });
 
 Route::middleware([
@@ -31,7 +29,14 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    Route::view('/', 'Home');
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::view('/rank', 'Rank');
+
+    Route::view('/pomodoro', 'Pomodoro');
+
 });

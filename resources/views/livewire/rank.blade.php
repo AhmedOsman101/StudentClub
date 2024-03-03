@@ -1,4 +1,4 @@
-<div wire:poll.keep-alive.2s >
+<div wire:poll.keep-alive.2s>
     <center>
         <h1>Global Rank</h1>
         <div class="hr"></div>
@@ -7,20 +7,23 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Num</th>
-                    <th>Name</th>
-                    <th>Points</th>
-                    <th>Country</th>
+                    <th class="text-center">Position</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Points</th>
+                    <th class="text-center">Clan</th>
+                    <th class="text-center">Country</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($users as $user)
-                    <tr>
-                            <td> {{ $user->id }} </td>
-                            <td> {{ $user->name }} </td>
-                            <td> {{ $user->score }} </td>
-                            <td> {{ $user->country }} </td>
-                    </tr>
+                <tr>
+                    <td class="text-center"> {{ ++$counter }} </td>
+                    <td class="text-center"> {{ $user->name }} </td>
+                    <td class="text-center"> {{ $user->score }} pts</td>
+                    <td class="text-center">{{ optional($user->team)->name }}</td>
+                    <td class="text-center">{{ $user->country }}</td>
+                    {{-- @dump($user->team->name) --}}
+                </tr>
                 @endforeach
             </tbody>
         </table>
