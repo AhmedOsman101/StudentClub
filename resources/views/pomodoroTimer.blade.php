@@ -50,18 +50,40 @@
             </div>
 
             <div class="controls">
-                <button id="start" onclick="start()">
+                <button id="start" onclick="start({{$currentUser->id}})">
                     <i class="fa-solid fa-play"></i>
                 </button>
 
-                <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
-                <button onclick="AddScore({{auth('web')->user()->id}})">click me</button>
+                <button id="reset" onclick="reset()">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </button>
+                <button id="pause" onclick="pause()">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+                <button id="resume" onclick="resume()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- SCRIPT -->
-    <script src="{{asset("js/pomodoro.js")}}"></script>
+    @php
+    $path = "js/pomodoro.js"
+    @endphp
+    <script src="{{asset($path)}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const Success = ()=>{
+            Swal.fire({
+            title: "Good job!",
+            text: "You have completed the pomodoro!",
+            icon: "success"
+            })
+        };
+        if (isCompleted) Success();
+        
+    </script>
 
 
 </body>
