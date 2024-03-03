@@ -20,15 +20,12 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/mail', function () {
-    Mail::to('ahmadahly284@gmail.com')->send(new Gmail);
-});
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
     Route::view('/', 'Home');
 
     Route::get('/dashboard', function () {
@@ -38,5 +35,4 @@ Route::middleware([
     Route::view('/rank', 'Rank');
 
     Route::view('/pomodoro', 'pomodoroTimer');
-
 });
