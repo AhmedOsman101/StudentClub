@@ -4,11 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Register extends Component
+class Sidebar extends Component
 {
-
     public function render()
     {
-        return view('livewire.register');
+        return view('livewire.sidebar');
     }
 }

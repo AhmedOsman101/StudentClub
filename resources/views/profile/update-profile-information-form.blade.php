@@ -34,7 +34,7 @@
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview" style="display: none;">
                     <span class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
-                          x-bind:style="'background-image: url(\'' + photoPreview + '\');'">
+                        x-bind:style="'background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
 
@@ -80,6 +80,27 @@
                     </p>
                 @endif
             @endif
+        </div>
+
+        <!-- Bio -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="bio" value="{{ __('Bio') }}" />
+            <x-input id="bio" type="text" class="mt-1 block w-full" wire:model="state.bio" placeholder="tell us more about yourself" autocomplete="bio" />
+            <x-input-error for="bio" class="mt-2" />
+        </div>
+        
+        <!-- Skills -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="skills" value="{{ __('Skills') }}" />
+            <x-input id="skills" type="text" class="mt-1 block w-full" wire:model="state.skills" placeholder="tell us what you can do" autocomplete="skills" />
+            <x-input-error for="skills" class="mt-2" />
+        </div>
+
+        <!-- Country -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="country" value="{{ __('Country') }}" />
+            <x-countries-drop-down />
+            <x-input-error for="country" class="mt-2" />
         </div>
     </x-slot>
 

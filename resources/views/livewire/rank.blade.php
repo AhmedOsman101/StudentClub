@@ -22,7 +22,6 @@
                     <td class="text-center"> {{ $user->score }} pts</td>
                     <td class="text-center">{{ optional($user->team)->name }}</td>
                     <td class="text-center">{{ $user->country }}</td>
-                    {{-- @dump($user->team->name) --}}
                 </tr>
                 @endforeach
             </tbody>
