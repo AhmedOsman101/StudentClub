@@ -34,6 +34,6 @@ Route::middleware([
     Route::view('/rank', 'Rank');
 
     Route::view('/pomodoro', 'pomodoroTimer');
-
-    // Route::get('/getUser', UserController::class . '@index');
 });
+
+Route::view('/sidebar', 'sidebar');

@@ -91,7 +91,7 @@ function start(userId) {
                         breakTitle.classList.remove("active");
                         workTitle.classList.add("active");
                         isCompleted = true;
-                        reset();
+                        // reset();
                     }
                 }
                 seconds = 59;

@@ -76,9 +76,12 @@
     <script>
         const Success = ()=>{
             Swal.fire({
-            title: "Good job!",
-            text: "You have completed the pomodoro!",
-            icon: "success"
+                title: "Good job!",
+                text: "You have completed the pomodoro!",
+                icon: "success",
+                didClose: () => {
+                reset();
+            },
             })
         };
         if (isCompleted) Success();
