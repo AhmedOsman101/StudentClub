@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class ShareCurrentUser {
@@ -17,7 +18,7 @@ class ShareCurrentUser {
     
     public function handle(Request $request, Closure $next): Response {
         // Get the current logged-in user
-        $user = $request->user() ?? auth()->user();
+        $user = Auth::user();
 
         // Share the current user with all views
         view()->share('currentUser', $user);
