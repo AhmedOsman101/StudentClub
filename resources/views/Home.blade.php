@@ -7,7 +7,9 @@
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <link href="{{ asset("images/Student Club Logo.png") }}" rel="icon" type="image/png" />
         <link href="{{ asset("css/home.css") }}" rel="stylesheet">
+        <link href="{{ asset("css/progressBars.css") }}" rel="stylesheet">
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
+        {{-- <link href="{{ asset("css/progressCharts.css") }}" rel="stylesheet"> --}}
         <title>{{ env("APP_NAME") }}</title>
     </head>
 
@@ -24,6 +26,7 @@
             </div>
 
         </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
     </body>
 
 </html>

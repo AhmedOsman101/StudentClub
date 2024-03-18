@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return view('test');
+});
 
 Route::middleware([
     'auth:sanctum',
@@ -34,6 +37,8 @@ Route::middleware([
     Route::view('/rank', 'Rank');
 
     Route::view('/pomodoro', 'pomodoroTimer');
+
+    Route::view('/todo','todo');
 });
 
 Route::view('/sidebar', 'sidebar');

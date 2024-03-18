@@ -9,10 +9,14 @@
     </div>
 
     <div class="link-wrapper">
-        <x-calendar-icon />
-        <a href="/calendar">
-            Calendar
-        </a>
+        {{--
+        <x-calendar-icon /> --}}
+        <div>hello</div>
+        <div>
+            <a href="/calendar">
+                Calendar
+            </a>
+        </div>
     </div>
     <div class="link-wrapper">
         <x-pomodoro-icon />
