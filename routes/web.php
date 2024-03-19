@@ -24,8 +24,8 @@ Route::get('/test', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'shareCurrentUser',
-    'verified'
+    'verified',
+    'shareCurrentUser'
 ])->group(function () {
 
     Route::view('/', 'Home');
@@ -38,7 +38,9 @@ Route::middleware([
 
     Route::view('/pomodoro', 'pomodoroTimer');
 
-    Route::view('/todo','todo');
+    Route::view('/todo', 'todo');
+
+    Route::view('/calendar', 'calendar');
 });
 
 Route::view('/sidebar', 'sidebar');

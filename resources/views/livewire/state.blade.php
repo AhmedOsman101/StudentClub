@@ -1,6 +1,6 @@
 <div class="diagram">
 
-    <h1>Your State</h1>
+    <h1>Your Stats</h1>
     <div class="hr"></div>
     <div class="Sunday">
         <div class="state_text">

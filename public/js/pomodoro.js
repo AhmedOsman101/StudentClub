@@ -27,8 +27,8 @@ let startBtn = document.getElementById("start");
 let minutes = document.getElementById("minutes");
 let secondsDisplay = document.getElementById("seconds");
 
-let workTime = 1;
-let breakTime = 1;
+let workTime = 25;
+let breakTime = 5;
 
 let seconds = 0;
 let timerInterval;
