@@ -29,6 +29,7 @@ class CalendarController extends Controller {
             }
             $events[] = [
                 "id" => $booking->id,
+                "user_id" => $booking->user_id,
                 "title" => $booking->title,
                 "start" => $booking->start_date,
                 "end" => $booking->end_date,
@@ -36,7 +37,7 @@ class CalendarController extends Controller {
             ];
         }
 
-        return view("calendar.index", ["events" => $events]);
+        return view("calendar", ["events" => $events]);
     }
     public function store(Request $request) {
         $request->validate([
@@ -46,6 +47,7 @@ class CalendarController extends Controller {
         ]);
         $booking = Booking::insert([
             "title" => $request["title"],
+            "user_id" => auth()->user()->id,
             "start_date" => $request["start_date"],
             "end_date" => $request["end_date"],
 
