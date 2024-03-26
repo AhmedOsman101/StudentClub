@@ -15,41 +15,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-Route::get('/test', function () {
-    return view('test');
-});
+Route::prefix('studentClub')->group(function () {
+    Route::get('/welcome', function () {
+        return view('welcome');
+    })->name('welcome');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-    'shareCurrentUser'
-])->group(function () {
 
-    Route::view('/', 'Home');
+    Route::middleware([
+        'auth:sanctum',
+        config('jetstream.auth_session'),
+        'verified',
+        'shareCurrentUser'
+    ])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        Route::view('/', 'Home')->name('home');
 
-    Route::view('/rank', 'Rank');
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
 
-    Route::view('/pomodoro', 'pomodoroTimer');
+        Route::view('/rank', 'Rank')->name('rank');
 
-    Route::view('/todo', 'todo');
+        Route::view('/pomodoro', 'pomodoroTimer')->name('pomodoro');
 
-    Route::view('/calendar', 'calendar');
+        Route::view('/todo', 'todo')->name('todo');
 
-    Route::prefix('calendar')->group(function () {
-        Route::get('/', [CalendarController::class, "index"])->name("calender.index");
-        Route::post('/store', [CalendarController::class, "store"])->name("calendar.store");
-        Route::patch('/patch/{id}', [CalendarController::class, "patch"])->name("calendar.patch");
-        Route::delete('/delete/{id}', [CalendarController::class, "destroy"])->name("calendar.destroy");
+        Route::prefix('calendar')->group(function () {
+            Route::get('/', [CalendarController::class, "index"])->name("calender.index");
+            Route::post('/store', [CalendarController::class, "store"])->name("calendar.store");
+            Route::patch('/patch/{id}', [CalendarController::class, "patch"])->name("calendar.patch");
+            Route::delete('/delete/{id}', [CalendarController::class, "destroy"])->name("calendar.destroy");
+        });
     });
-    
 });
-
-Route::view('/sidebar', 'sidebar');

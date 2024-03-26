@@ -52,21 +52,6 @@
 <!-- SCRIPT -->
 
 <script src="{{asset('js/pomodoro.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    const Success = ()=>{
-            Swal.fire({
-                title: "Good job!",
-                text: "You have completed the pomodoro!",
-                icon: "success",
-                didClose: () => {
-                reset();
-            },
-            })
-        };
-        if (isCompleted) Success();
-        
-</script>
 
 
 @endsection

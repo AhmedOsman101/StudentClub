@@ -18,5 +18,5 @@
     </div>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
 @endsection
