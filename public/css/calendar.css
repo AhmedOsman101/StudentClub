@@ -1,0 +1,6 @@
+.fc-event {
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}

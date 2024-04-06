@@ -8,44 +8,37 @@
     --color-shadow: hsl(235, 36%, 35%);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html,
 body {
     height: 100%;
     background-color: var(--color-primary);
     font-size: 1.6rem;
-    font-family: "Open sans", sans-serif;
 }
 
-p,
-i,
-h1 {
+.pomodoro p,
+.pomodoro i,
+.pomodoro h1 {
     color: var(--color-font);
 }
 
-i {
+.pomodoro i {
     font-size: 3.2rem;
     padding: 0 1rem;
 }
 
-h1 {
+.pomodoro h1 {
     font-size: 3.2rem;
 }
 
 /* ==== CONTENT ==== */
 
-section {
+.pomodoro {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.container {
+#container {
     width: min(42.5rem, 100%);
     margin-inline: auto;
     padding-inline: 2rem;
