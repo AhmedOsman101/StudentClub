@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Sidebar extends Component
+class ProgressChart extends Component
 {
     public function render()
     {
-        return view('livewire.sidebar');
+        return view('livewire.progress-chart');
     }
 }

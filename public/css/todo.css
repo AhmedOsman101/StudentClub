@@ -1,0 +1,94 @@
+.card{
+    border-color: #f7f7f7 !important;
+}
+.create-todo {
+    width: 60%;
+}
+.btn-save{
+    border: none;
+    outline: none;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    border-radius: 2px;
+    display: block;
+    margin: 10px auto;
+    background-color: #ffffff;
+}
+
+.btn-save:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #ffffff;
+    background: #01b1ff;
+    transition: all .35s;
+  }
+.btn-save span{
+    position: relative;
+    z-index: 2;
+}
+.btn-save:hover{z-index: 2;
+    color: #fff;
+}
+
+  .btn-save:hover:after{
+    width: 100%;
+
+  }
+.get-task{
+    width: 60%;
+    margin: 10px auto ;
+}
+.create-todo .card-body{
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001a;
+}
+.input-create{
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    margin: 5px auto 10px;
+}
+.delete,
+.update{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 5px 0px;
+}
+.delete:hover,
+.update:hover{
+    transition: all 0.6s ease-in-out;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+thead
+tr{
+    background-color: rgb(249 249 249);
+    color: rgb(192 196 202);
+    ;
+}
+tbody tr td{
+    padding: 20px !important;
+}

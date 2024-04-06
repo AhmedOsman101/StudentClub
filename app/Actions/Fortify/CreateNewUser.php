@@ -2,6 +2,7 @@
 
 namespace App\Actions\Fortify;
 
+use App\Models\Score;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +35,7 @@ class CreateNewUser implements CreatesNewUsers {
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
                 $this->createTeam($user);
+                $this->createScores($user);
             });
         });
     }
@@ -42,10 +44,29 @@ class CreateNewUser implements CreatesNewUsers {
      * Create a personal team for the user.
      */
     protected function createTeam(User $user): void {
-        $user->ownedTeams()->save(Team::forceCreate([
+        $team = Team::forceCreate([
             'user_id' => $user->id,
             'name' => explode(' ', $user->name, 2)[0] . "'s Team",
             'personal_team' => true,
-        ]));
+        ]);
+
+        $user->ownedTeams()->save($team);
+
+        // Update the current_team_id field for the user
+        $user->current_team_id = $team->id;
+        $user->save();
+    }
+
+    protected function createScores(User $user): void {
+        Score::create([
+            'user_id' => $user->id,
+            'sunday' => 0,
+            'monday' => 0,
+            'tuesday' => 0,
+            'wednesday' => 0,
+            'thursday' => 0,
+            'friday' => 0,
+            'saturday' => 0,
+        ]);
     }
 }

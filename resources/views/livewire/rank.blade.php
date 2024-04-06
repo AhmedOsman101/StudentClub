@@ -10,7 +10,7 @@
                     <th class="text-center">Position</th>
                     <th class="text-center">Name</th>
                     <th class="text-center">Points</th>
-                    <th class="text-center">Clan</th>
+                    <th class="text-center">Team</th>
                     <th class="text-center">Country</th>
                 </tr>
             </thead>

@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->string('country')->after('email');
             $table->text('skills')->after('country')->nullable();
             $table->text('bio')->after('skills')->nullable();
-            $table->integer('Score', unsigned: true)->after('bio')->default(0);
+            $table->integer('score', unsigned: true)->after('bio')->default(0);
         });
     }
 

@@ -9,7 +9,7 @@ class State extends Component {
     public function render() {
         $days = Score::all();
         return view('livewire.state', [
-            'days' => $days,
+            'days' => $days[0],
         ]);
     }
 }
