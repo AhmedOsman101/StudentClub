@@ -8,14 +8,16 @@
         <title>{{ config('app.name', env('APP_NAME')) }}</title>
 
         <!-- Fonts -->
+        <link href="https://fonts.bunny.net" rel="preconnect">
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <!-- Styles -->
+        <link
+            href="https://fonts.bunny.net/css?family=figtree:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet" /> 
+        <!-- ========== assets ========== -->
         @livewireStyles
+        @livewireScripts
+        <!-- vite assets -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
         <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">

@@ -21,7 +21,10 @@
     @livewireStyles
     @livewireScripts
     <!-- ========== End styles ========== -->
+    <!-- vite assets -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @yield('headers')
+
 </head>
 
 <body id="body-pd">
